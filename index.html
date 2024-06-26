@@ -1,0 +1,722 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./static/img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Akshat Sharma</title>
+  </head>
+  <style>
+.icon {
+  width: 100px;
+  height: 100px;
+}
+    #element {
+  color: rgb(103, 72, 255);
+}
+.leftsection {
+  font-size: 3rem;
+  margin: 30px 0;
+
+}
+.purple{
+  color: rgb(0, 140, 255);
+}
+.achievements-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f4f8;
+    margin-bottom: 0;
+}
+
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.achievement-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-grow: 1;
+}
+
+.achievement-content {
+    padding: 20px;
+}
+
+.achievement-title {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.achievement-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 0.3;
+}
+
+.achievement-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.achievement-card:hover:before {
+    opacity: 1;
+}
+
+.achievement-content {
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-title, .achievement-description {
+    color: #fff;
+}
+.about-description {
+    padding: 0 1rem;
+    margin-left: .2rem;
+    margin-bottom: 2rem;
+    text-align:left ;
+        /* font-size: ; */
+}
+
+
+  </style>
+  <body>
+
+    
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          
+          <a href="#home" class="nav-logo"
+            ><img src="static/img/icon.png" class="mylogo" alt="Z"
+          /></a>          
+        </div>
+        <div class="welcome-container">
+          <h1 class="Middle-Head">My Portfolio</h1>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link home active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#achievements" class="nav-link about">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid section" id="home">
+        <div class="home-data">
+          <div class="leftsection">
+            Hi, I am <span class="purple"> Akshat Sharma </span>
+            <div>and I am a</div>
+            <span id="element"></span>
+
+        </div>
+
+          <a
+            href="#"
+            target="_blank"
+            class="button"
+            >My Resume</a
+          >
+        </div>
+
+        <div class="home-social">
+          <a
+            href="https://www.linkedin.com/in/akshat--sharma/"
+            target="_blank"
+            class="home-social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/akshat07077"
+            target="_blank"
+            class="home-social-icon"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+          href="tel: +919413466075"
+          target="_blank"
+          class="home-social-icon"
+          ><i class="uil uil-phone"></i
+        ></a>
+        <a
+        href="tel:+919413466075"
+        target="_blank"
+        class="home-social-icon"
+        ><i class="bx bxl-phone"></i
+      ></a>
+        </div>
+
+        <div class="home-img">
+          <img
+            src="static/img/bg.png"
+            alt="icon"
+            class="myimage"
+          />
+        </div>
+      </section>
+
+      <!--===== ABOUT =====-->
+      <section class="about-section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about-container bd-grid">
+          <!-- <div class="about-img">
+            <img src="static/img/Scrollimg.png" alt="" />
+          </div> -->
+
+          <div style="text-align: center">
+            <h2 class="about-subtitle">A Brief Description</h2>
+            <p class="about-text">
+              Hello! I'm a passionate and dedicated full-stack developer with a strong background in Python development. I thrive on creating efficient and innovative solutions to complex problems. With expertise in both front-end and back-end technologies, I enjoy building robust, scalable, and user-friendly applications. My journey in the tech world has been driven by a love for continuous learning and a desire to make a meaningful impact through technology. Let's connect and create something amazing together!
+            </p>
+            <br />
+            <p>
+              Drop a mail at messageakshat@gmail.com
+              <i
+                style="color: #4070f4; font-size: 1.2rem; cursor: pointer"
+                class="bx bx-copy"
+                id="copy"
+              ></i>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--===== SKILLS =====-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-container bd-grid">
+          <div>
+            <h2 class="skills-subtitle">Front-end Skills</h2>
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="bx bxl-html5 skills-icon"></i>
+                <span class="skills-name">HTML5</span>
+              </div>
+              <!-- <div class="skills-bar skills-html"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">75%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="bx bxl-css3 skills-icon"></i>
+                <span class="skills-name">CSS3</span>
+              </div>
+              <!-- <div class="skills-bar skills-css"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">70%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="bx bxl-javascript skills-icon"></i>
+                <span class="skills-name">JAVASCRIPT</span>
+              </div>
+              <!-- <div class="skills-bar skills-js"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">85%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                class="skills-icon"
+                src="./static/img/python.png"
+                alt=""
+              />
+                <span class="skills-name">Python</span>
+              </div>
+              <!-- <div class="skills-bar skills-react"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">80%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/github.png"
+                  alt=""
+                />                
+                <span class="skills-name">Github</span>
+              </div>
+              <!-- <div class="skills-bar skills-redux"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">90%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/bootstrap.png"
+                  alt=""
+                />                <span class="skills-name">Boostrap</span>
+              </div>
+              <!-- <div class="skills-bar skills-mui"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">65%</span>
+              </div> -->
+            <!-- {% comment %} </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/ASPnetMVC.png"
+                  alt=""
+                />
+                <span class="skills-name">ASP.NET(MVC)</span>
+              </div> {% endcomment %} -->
+              <!-- <div class="skills-bar skills-ts"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">70%</span>
+              </div> -->
+            </div>
+          </div>
+
+          <div>
+            <h2 class="skills-subtitle">Back-end Skills</h2>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/django.png"
+                  alt=""
+                />
+                <span class="skills-name">Django</span>
+              </div>
+              <!-- <div class="skills-bar skills-express"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">85%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="bx bxl-nodejs skills-icon"></i>
+                <span class="skills-name">MySQL</span>
+              </div>
+              <!-- <div class="skills-bar skills-node"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">85%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img class="skills-icon" src="./static/img/SQLServer.png" alt="" />
+                <span class="skills-name">SQL Server</span>
+              </div> 
+              <!-- <div class="skills-bar skills-sql"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">65%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/mongodb.png"
+                  alt=""
+                />
+                <span class="skills-name">MongoDB</span>
+              </div>
+              <!-- <div class="skills-bar skills-mongo"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">80%</span>
+              </div> -->
+            </div>
+          </div>
+                    <!-- Python skills -->
+          <div>
+            <h2 class="skills-subtitle">Python Skills</h2>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/dsa.jpeg"
+                  alt=""
+                />
+                <span class="skills-name">DSA</span>
+              </div>
+              <!-- <div class="skills-bar skills-express"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">85%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img class='skills-icon' src="./static/img/flask.png" alt="Flask"> 
+                <span class="skills-name">Flask</span>
+              </div>
+              <!-- <div class="skills-bar skills-node"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">85%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img class="skills-icon" src="./static/img/django.png" alt="" />
+                <span class="skills-name">Django</span>
+              </div> 
+              <!-- <div class="skills-bar skills-sql"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">65%</span>
+              </div> -->
+            </div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <img
+                  class="skills-icon"
+                  src="./static/img/pandas.png"
+                  alt=""
+                />
+                <span class="skills-name">Pandas</span>
+              </div>
+              <!-- <div class="skills-bar skills-mongo"></div> -->
+              <!-- <div>
+                <span class="skills-percentage">80%</span>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- <div>
+            <img src="static/img/project3.jpg" alt="" class="skills-img" />
+          </div> -->
+        </div>
+      </section>
+
+      <!--===== ACHIEVEMENTS =====-->
+<section class="achievements-section" id="achievements">
+  <h2 class="section-title">Achievements</h2>
+  <div class="achievement-container">
+      <div class="achievement-card"> 
+        <a href="https://certificates.cs50.io/10b30453-99cc-4a94-a299-10769d4199d0.pdf?size=letter" target="_blank" class="achievement-card">
+          <img src="./static/img/cs50.png" alt="Achievement 1" />
+        </a>
+          <br>
+          <p class="about-description">I completed the CS50x course with Harvard University, which provided a comprehensive foundation in computer science. The course covered topics such as algorithms, 
+            data structures, web development, and more, equipping me with essential skills and knowledge. </p>
+          <div class="achievement-content">
+              <h3 class="achievement-title">CS50 Certified by Harvard University</h3>
+              <p class="achievement-description"></p>
+          </div>
+      </div>
+      <div class="achievement-card">
+        <a href="https://hackerrank.com/walkingmiracle" target="_blank" class="achievement-card">
+          <img src="./static/img/dsa.jpeg" alt="Achievement 3" />
+        </a>
+          <br>
+          <p class="about-description">I achieved a 6-star gold rating in Data Structures and Algorithms on HackerRank. This accomplishment reflects my strong problem-solving skills and expertise in key computer science concepts, 
+            demonstrating my ability to tackle complex challenges efficiently.</p>
+          <div class="achievement-content">
+              <h3 class="achievement-title">6 Star in Data Structures and Algorithms</h3>
+              <p class="achievement-description"></p>
+          </div>
+      </div>
+      <div class="achievement-card">
+        <a href="https://hackerrank.com/walkingmiracle" target="_blank" class="achievement-card">
+          <img src="./static/img/sql.jpeg" alt="Achievement 2" />
+        </a>
+        <br>
+        <p class="about-description">I earned a 5-star gold rating in SQL on HackerRank, showcasing my proficiency in database management and query optimization. This achievement highlights my ability to work with relational databases effectively and handle large datasets.</p>
+        <div class="achievement-content">
+            <h3 class="achievement-title"> 5 Start Gold in mySQL certifies by Hackerrank</h3>
+        </div>
+    </div>
+    <div class="achievement-card">
+      <a href="https://cs50.harvard.edu/certificates/58dc52d7-c270-45ab-97e0-73ce030ca024" target="_blank" class="achievement-card">
+        <img src="./static/img/cs50p.png" alt="Achievement 2" />
+      </a>
+      <br>
+      <p class="about-description">I successfully completed the CS50P course with Harvard University, focusing on programming with Python. This course enhanced my understanding of Python,
+        including its application in solving real-world problems, data analysis, and web development. </p>
+      <div class="achievement-content">
+          <h3 class="achievement-title">CS50P Certified by Harvard University</h3>
+      </div>
+  </div>
+  </div>
+</section>
+
+      <!--===== Projects =====-->
+      <section class="projects section" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-container">
+          <div class="project-img">
+            <img src="static/img/disaster.png" alt="asp.net" />
+            <p class="project-title">Disaster Management System</p>
+            <p class="project-subtitle">
+              Our project is a comprehensive disaster management web application built using Django. This application empowers users
+              to register and report disaster events while efficiently managing related resources. Users can sign up with their email and phone number, with the latter being utilized for SMS notifications via Twilio.
+              The platform allows users to report disaster events by providing essential details such as the event type, date, location, and a description. Additionally,
+              users can submit and manage resources pertinent to disaster events, ensuring better coordination and response. <br />
+              <!-- <br />
+              A collaborative project, built in 5 days by a team of 4 developers
+              and 2 UI/UX designers. <br /> -->
+              <br />HTML | CSS | JavaScript | Boostrap | Python | Django | mySQL
+            </p>
+            <div class="project-btns">
+              <a
+                href="https://github.com/Akshat07077/Disaster-Management-Project1"
+                target="_blank"
+                class="small-btn button"
+              >
+                Code<i class="bx bxl-github"></i>
+              </a>
+              <a
+                href="https://disaster-managemeent-projec.vercel.app/"
+                target="_blank"
+                class="small-btn button"
+              >
+                Live<i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-img">
+            <img src="static/img/object.png" alt="Quiz" />
+            <p class="project-title">Object Detection Model</p>
+            <p class="project-subtitle">
+              Our project is an advanced object detection web application built using Django and Python, leveraging the powerful YOLOv5 model. This application enables users to detect objects in real-time using both uploaded images and live webcam feeds. YOLOv5's cutting-edge technology
+              ensures high accuracy and speed, making it suitable for various applications, from security surveillance to automated inspection systems.Users can upload images to the platform, and the application processes these images to detect objects, it integrates with the user's webcam, providing a live feed for real-time object detection <br>
+              <br />HTML | CSS | Django | Python | Yolov5
+            </p>
+            <div class="project-btns">
+              <a
+                href="#"
+                target="_blank"
+                class="small-btn button"
+              >
+                Code<i class="bx bxl-github"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="small-btn button"
+              >
+                Live<i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-img">
+            <img src="static/img/portfolio.png" alt="movie" />
+            <p class="project-title">My Portfolio</p>
+            <p class="project-subtitle">
+              Our portfolio project is a dynamic and visually appealing web application designed to showcase the skills, projects, and achievements of a developer. Built using Django, Python, and modern web technologies, this portfolio site provides a comprehensive and professional platform to highlight individual expertise and experience.
+
+              The portfolio includes sections for an introduction, detailed descriptions of past projects, and a blog for sharing insights and updates. Each project entry contains images, descriptions, and links to the code repository, giving visitors a clear understanding of the work. . <br />
+              <!-- <br />
+              A collaborative project built by a team of 6, executed in 5 days.
+              <br /> -->
+              <br />
+              HTML | CSS | JAVASCRIPT | Django | Git 
+            </p>
+            <div class="project-btns">
+              <a
+                href="#"
+                target="_blank"
+                class="small-btn button"
+              >
+                Code<i class="bx bxl-github"></i>
+              </a>
+              <a
+                href="#
+                target="_blank"
+                class="small-btn button"
+              >
+                Live<i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-img">
+            <img src="./static/img/medical.jpg" alt="" />
+            <p class="project-title">Uploading Soon</p>
+            <p class="project-subtitle">
+              A Medical Diagnosis Website in Django Integrated with AI. Built on Django.
+              <br />
+              <br />
+              HTML | CSS | Javascript | Django | NLP
+            </p>
+            <div class="project-btns">
+              <a
+                href="#"
+                target="_blank"
+                class="small-btn button"
+              >
+                Code<i class="bx bxl-github"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="small-btn button"
+              >
+                Live<i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== CONTACT =====-->
+      <!-- <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-container bd-grid">
+          <form action="" class="contact-form">
+            <input type="text" placeholder="Name" class="contact-input" />
+            <input type="mail" placeholder="Email" class="contact-input" />
+            <textarea
+              name=""
+              id=""
+              cols="0"
+              rows="10"
+              class="contact-input"
+            ></textarea>
+            <input
+              type="button"
+              value="Contact"
+              class="contact-button button"
+            />
+          </form>
+        </div>
+      </section> -->
+    </main>
+
+    <!--===== FOOTER + CONTACT=====-->
+    <footer class="footer section" id="contact">
+      <h2 class="section-title">Get in touch</h2>
+      <p class="footer-title">Akshat Sharma</p>
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/in/akshat--sharma/"
+          target="_blank"
+          class="footer-icon"
+          ><i class="bx bxl-linkedin">
+            <br />
+            LinkedIn</i
+          ></a
+        >
+        <a
+          href="#"
+          target="_blank"
+          class="footer-icon"
+          ><i class="bx bxl-twitter">
+            <br />
+            Twitter</i
+          ></a
+        >
+        <a
+          href="#"
+          target="_blank"
+          class="footer-icon"
+          ><i class="bx bxl-instagram">
+            <br />
+            Instagram</i
+          ></a
+        >
+        <a
+          href="mailto:messageakshat@gmail.com"
+          target="_blank"
+          class="footer-icon"
+          ><i class="bx bx-mail-send">
+            <br />
+            E-mail</i
+          ></a
+        >
+        <a href="tel:+919413466075" target="_blank" class="footer-icon"
+          ><i class="bx bx-phone">
+            <br />
+            Phone</i
+          ></a
+        >
+      </div>
+      <p>&#169; 2023 copyright all right reserved</p>
+    </footer>
+
+    <!--===== MAIN JS =====-->
+    <script src="static/js/main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Engineer', 'Full Stack Developer', "Python Developer"],
+            typeSpeed: 50,
+        });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  </body>
+</html>
