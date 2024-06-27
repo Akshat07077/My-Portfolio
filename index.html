@@ -123,18 +123,24 @@
     text-align:left ;
         /* font-size: ; */
 }
-    .home-img {
-  background: url(/static/img/bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 1px solid rgba(0, 0, 0, 1.5);
-  box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30%);
-  border-radius: 12rem;
-  order: 1;
-  width: 300px;
-  height: 300px;
-  margin-bottom: 100px;
+@media (max-width: 768px) {
+  .home-data {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Center align items */
+    text-align: center; /* Center align text */
+  }
+  
+  .home-img, .leftsection {
+    flex: none; /* Remove flex-grow and flex-shrink */
+    width: 100%; /* Take full width */
+    margin: 0; /* Reset margins */
+  }
+
+  .profile-pic {
+    width: 100%; /* Adjust the size for smaller screens */
+    max-width: 500px; /* Set a maximum width */
+    margin-bottom: 20px; /* Add some space below the picture */
+  }
 }
 
 
