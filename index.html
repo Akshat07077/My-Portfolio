@@ -123,6 +123,20 @@
     text-align:left ;
         /* font-size: ; */
 }
+    .home-img {
+  background: url(/static/img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgba(0, 0, 0, 1.5);
+  box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30%);
+  border-radius: 12rem;
+  order: 1;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 100px;
+}
+
 
 
   </style>
@@ -218,11 +232,6 @@
         </div>
 
         <div class="home-img">
-          <img
-            src="static/img/bg.png"
-            alt="icon"
-            class="myimage"
-          />
         </div>
       </section>
 
@@ -231,9 +240,6 @@
         <h2 class="section-title">About</h2>
 
         <div class="about-container bd-grid">
-          <!-- <div class="about-img">
-            <img src="static/img/Scrollimg.png" alt="" />
-          </div> -->
 
           <div style="text-align: center">
             <h2 class="about-subtitle">A Brief Description</h2>
@@ -275,20 +281,14 @@
                 <i class="bx bxl-css3 skills-icon"></i>
                 <span class="skills-name">CSS3</span>
               </div>
-              <!-- <div class="skills-bar skills-css"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">70%</span>
-              </div> -->
+
             </div>
             <div class="skills-data">
               <div class="skills-names">
                 <i class="bx bxl-javascript skills-icon"></i>
                 <span class="skills-name">JAVASCRIPT</span>
               </div>
-              <!-- <div class="skills-bar skills-js"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">85%</span>
-              </div> -->
+
             </div>
             <div class="skills-data">
               <div class="skills-names">
@@ -299,10 +299,7 @@
               />
                 <span class="skills-name">Python</span>
               </div>
-              <!-- <div class="skills-bar skills-react"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">80%</span>
-              </div> -->
+
             </div>
             <div class="skills-data">
               <div class="skills-names">
@@ -313,10 +310,7 @@
                 />                
                 <span class="skills-name">Github</span>
               </div>
-              <!-- <div class="skills-bar skills-redux"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">90%</span>
-              </div> -->
+
             </div>
             <div class="skills-data">
               <div class="skills-names">
@@ -326,24 +320,6 @@
                   alt=""
                 />                <span class="skills-name">Boostrap</span>
               </div>
-              <!-- <div class="skills-bar skills-mui"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">65%</span>
-              </div> -->
-            <!-- {% comment %} </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <img
-                  class="skills-icon"
-                  src="./static/img/ASPnetMVC.png"
-                  alt=""
-                />
-                <span class="skills-name">ASP.NET(MVC)</span>
-              </div> {% endcomment %} -->
-              <!-- <div class="skills-bar skills-ts"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">70%</span>
-              </div> -->
             </div>
           </div>
 
@@ -392,10 +368,6 @@
                 />
                 <span class="skills-name">MongoDB</span>
               </div>
-              <!-- <div class="skills-bar skills-mongo"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">80%</span>
-              </div> -->
             </div>
           </div>
                     <!-- Python skills -->
@@ -410,30 +382,18 @@
                 />
                 <span class="skills-name">DSA</span>
               </div>
-              <!-- <div class="skills-bar skills-express"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">85%</span>
-              </div> -->
             </div>
             <div class="skills-data">
               <div class="skills-names">
                 <img class='skills-icon' src="./static/img/flask.png" alt="Flask"> 
                 <span class="skills-name">Flask</span>
               </div>
-              <!-- <div class="skills-bar skills-node"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">85%</span>
-              </div> -->
             </div>
             <div class="skills-data">
               <div class="skills-names">
                 <img class="skills-icon" src="./static/img/django.png" alt="" />
                 <span class="skills-name">Django</span>
               </div> 
-              <!-- <div class="skills-bar skills-sql"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">65%</span>
-              </div> -->
             </div>
             <div class="skills-data">
               <div class="skills-names">
@@ -444,16 +404,8 @@
                 />
                 <span class="skills-name">Pandas</span>
               </div>
-              <!-- <div class="skills-bar skills-mongo"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">80%</span>
-              </div> -->
             </div>
           </div>
-
-          <!-- <div>
-            <img src="static/img/project3.jpg" alt="" class="skills-img" />
-          </div> -->
         </div>
       </section>
 
@@ -546,7 +498,7 @@
           </div>
 
           <div class="project-img">
-            <img src="static/img/object.png" alt="Quiz" />
+            <img src="static/img/object.png" alt="object" />
             <p class="project-title">Object Detection Model</p>
             <p class="project-subtitle">
               Our project is an advanced object detection web application built using Django and Python, leveraging the powerful YOLOv5 model. This application enables users to detect objects in real-time using both uploaded images and live webcam feeds. YOLOv5's cutting-edge technology
