@@ -129,30 +129,137 @@
   justify-content: center;
   margin-bottom: -20px; /* Space below the image */
 }
-/* /* @media (max-width: 768px) {
-  .home-data {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Center align items */
-    text-align: center; /* Center align text */
-    padding-top: 100px;
-  }
-  
-  .home-img, .leftsection {
-    flex: none; /* Remove flex-grow and flex-shrink */
-    width: 100%; /* Take full width */
-    margin: 0; /* Reset margins */
-  }
+/* Achievements Section */
+.achievements {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
 
-  .profile-pic {
-    width: 100%; /* Adjust the size for smaller screens */
-    max-width: 500px; /* Set a maximum width */
-    margin-bottom: 20px; /* Add some space below the picture */
-  } */
-} */
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.achievement-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 45%; /* Adjust width to fit two cards per slide */
+  box-sizing: border-box;
+}
+
+.achievement-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.achievement-card p {
+  color: #666;
+  font-size: 1em;
+}
+
+/* Add arrows for navigation */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-nav button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+}
+
+.slider-nav button:hover {
+  color: #666;
+}
+
+
 
 
 
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const track = document.querySelector('.slide-track');
+      const slides = Array.from(track.children);
+      const nextButton = document.createElement('button');
+      const prevButton = document.createElement('button');
+    
+      nextButton.innerHTML = '&#10095;'; // Right arrow
+      prevButton.innerHTML = '&#10094;'; // Left arrow
+    
+      nextButton.classList.add('slider-next');
+      prevButton.classList.add('slider-prev');
+    
+      const sliderNav = document.createElement('div');
+      sliderNav.classList.add('slider-nav');
+      sliderNav.appendChild(prevButton);
+      sliderNav.appendChild(nextButton);
+    
+      document.querySelector('.slider').appendChild(sliderNav);
+    
+      let currentIndex = 0;
+    
+      const updateSlidePosition = () => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+      };
+    
+      nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+          updateSlidePosition();
+        }
+      });
+    
+      prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlidePosition();
+        }
+      });
+    
+      window.addEventListener('resize', updateSlidePosition);
+    });
+    </script>
+        
   <body>
 
     
@@ -429,56 +536,41 @@
       </section>
 
       <!--===== ACHIEVEMENTS =====-->
-<section class="achievements-section" id="achievements">
-  <h2 class="section-title">Achievements</h2>
-  <div class="achievement-container">
-      <div class="achievement-card"> 
-        <a href="https://certificates.cs50.io/10b30453-99cc-4a94-a299-10769d4199d0.pdf?size=letter" target="_blank" class="achievement-card">
-          <img src="./static/img/cs50.png" alt="Achievement 1" />
-        </a>
-          <br>
-          <p class="about-description">I completed the CS50x course with Harvard University, which provided a comprehensive foundation in computer science. The course covered topics such as algorithms, 
-            data structures, web development, and more, equipping me with essential skills and knowledge. </p>
-          <div class="achievement-content">
-              <h3 class="achievement-title">CS50 Certified by Harvard University</h3>
-              <p class="achievement-description"></p>
-          </div>
-      </div>
-      <div class="achievement-card">
-        <a href="https://hackerrank.com/walkingmiracle" target="_blank" class="achievement-card">
-          <img src="./static/img/dsa.jpeg" alt="Achievement 3" />
-        </a>
-          <br>
-          <p class="about-description">I achieved a 6-star gold rating in Data Structures and Algorithms on HackerRank. This accomplishment reflects my strong problem-solving skills and expertise in key computer science concepts, 
-            demonstrating my ability to tackle complex challenges efficiently.</p>
-          <div class="achievement-content">
-              <h3 class="achievement-title">6 Star in Data Structures and Algorithms</h3>
-              <p class="achievement-description"></p>
-          </div>
-      </div>
-      <div class="achievement-card">
-        <a href="https://hackerrank.com/walkingmiracle" target="_blank" class="achievement-card">
-          <img src="./static/img/sql.jpeg" alt="Achievement 2" />
-        </a>
-        <br>
-        <p class="about-description">I earned a 5-star gold rating in SQL on HackerRank, showcasing my proficiency in database management and query optimization. This achievement highlights my ability to work with relational databases effectively and handle large datasets.</p>
-        <div class="achievement-content">
-            <h3 class="achievement-title"> 5 Start Gold in mySQL certifies by Hackerrank</h3>
-        </div>
-    </div>
-    <div class="achievement-card">
-      <a href="https://cs50.harvard.edu/certificates/58dc52d7-c270-45ab-97e0-73ce030ca024" target="_blank" class="achievement-card">
-        <img src="./static/img/cs50p.png" alt="Achievement 2" />
-      </a>
-      <br>
-      <p class="about-description">I successfully completed the CS50P course with Harvard University, focusing on programming with Python. This course enhanced my understanding of Python,
-        including its application in solving real-world problems, data analysis, and web development. </p>
-      <div class="achievement-content">
-          <h3 class="achievement-title">CS50P Certified by Harvard University</h3>
-      </div>
-  </div>
-  </div>
-</section>
+      <section class="achievements section" id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <div class="achievement-card">
+                <img src="static/img/cs50.png" alt="CS50x">
+                <h3>CS50x Completion</h3>
+                <p>I completed the CS50x course with Harvard University, which provided a comprehensive foundation in computer science. The course covered topics such as algorithms, 
+                  data structures, web development, and more, equipping me with essential skills and knowledge.</p>
+              </div>
+              <div class="achievement-card">
+                <img src="static/img/cs50p.png" alt="CS50P">
+                <h3>CS50P Completion</h3>
+                <p>I successfully completed the CS50P course with Harvard University, focusing on programming with Python. This course enhanced my understanding of Python,
+                  including its application in solving real-world problems, data analysis, and web development.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="achievement-card">
+                <img src="static/img/dsa.jpeg" alt="6-Star Gold in DSA">
+                <h3>6-Star Gold in DSA</h3>
+                <p>I achieved a 6-star gold rating in Data Structures and Algorithms on HackerRank. This accomplishment reflects my strong problem-solving skills and expertise in key computer science concepts, 
+                  demonstrating my ability to tackle complex challenges efficiently.</p>
+              </div>
+              <div class="achievement-card">
+                <img src="static/img/sql.jpeg" alt="5-Star Gold in SQL">
+                <h3>5-Star Gold in SQL</h3>
+                <p>I earned a 5-star gold rating in SQL on HackerRank, showcasing my proficiency in database management and query optimization. This achievement highlights my ability to work with relational databases effectively and handle large datasets.</p>
+              </p>
+              </div>
+            </section>
+      
+      
+      
 
       <!--===== Projects =====-->
       <section class="projects section" id="projects">
